@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- External CSS -->
     <link href="styles.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -62,9 +63,9 @@
 
                     </p>
                     <div class="buttons">
-                        <button class="btn hire-me">Hire me</button>
+                        <button class="btn hire-me"><a style="color: #fff;text-decoration: none;" href="#contact">Hire me</a></button>
                         <div class="dropdown">
-                            <button class="btn resume">My Resume</button>
+                            <button id="viewResumeBtn" class="btn resume">My Resume</button>
                             <!-- <div class="dropdown-content">
                         <a href="#">Download PDF</a>
                         <a href="#">View Online</a>
@@ -221,7 +222,7 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>Contact Me</h2>
-            <form action="#" method="post" class="contact-form">
+            <form id="contact-form" class="contact-form">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -229,6 +230,10 @@
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">subject:</label>
+                    <input type="subject" id="subject" name="subject" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Message:</label>
@@ -254,7 +259,15 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "r50v-Hp8srylWeYUw",
+            });
+        })();
+    </script>
     <!-- External JS -->
     <script src="script.js"></script>
 </body>
