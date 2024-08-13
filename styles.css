@@ -2,21 +2,17 @@ html {
     scroll-behavior: smooth;
 }
 
-.headers {
+.headers{
     background-color: #007f8d;
     color: #fff;
 }
-
-.button_nav {
-    background-color: #f1f1f1;
-
+.button_nav{
+    background-color:#f1f1f1;
+    
 }
-
-.button_nav,
-span {
+.button_nav,span{
     color: red;
 }
-
 .navbar-brand {
     font-weight: bold;
     font-size: 24px;
@@ -52,7 +48,7 @@ body.dark-mode {
     color: #fff;
 }
 
-.fullbodey {
+.fullbodey{
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
@@ -87,7 +83,7 @@ h1 {
 }
 
 .highlight {
-    /* display: inline-block; */
+    display: inline-block;
     background: linear-gradient(to right, #007f8d, #003140);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -101,7 +97,8 @@ p {
 }
 
 .tech-stack {
-    color: #030303;
+    background: linear-gradient(to right,#003140, #02a4b6 );
+    color: #f5f5f5;
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
@@ -157,7 +154,7 @@ p {
     position: absolute;
     background-color: #fff;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     border-radius: 8px;
     overflow: hidden;
     z-index: 1;
@@ -178,11 +175,16 @@ p {
     display: block;
 }
 
+.portfolio-image {
+    position: relative;
+    max-width: 45%;
+    margin-left: 20px;
+}
 
 .portfolio-image img {
     width: 100%;
     border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* Media Queries for Responsiveness */
@@ -268,12 +270,7 @@ p {
 
 /* ?***************about-section************* */
 .about-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    padding: 50px;
-    width: 100%;
+    padding: 50px 0;
 }
 
 .about-content {
@@ -314,13 +311,10 @@ h2 {
     width: 50px;
     height: 50px;
     margin-right: 15px;
-    padding: 5px;
-    border-radius: 50%;
 }
 
 .about-image {
     width: 100%;
-    height: 100%;
     border-radius: 10px;
 }
 
@@ -332,57 +326,41 @@ h2 {
     width: 100%;
     justify-content: center;
     align-items: center;
-}
-
-.card-container {
+  }
+  
+  .card-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    /* Spacing between cards */
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px; /* Spacing between cards */
     cursor: pointer;
-}
-
-.card {
+  }
+  
+  .card {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
     text-align: center;
     transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    /* Slight zoom effect on hover */
-}
-
-.card h6 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.card p {
-    text-align: left;
-    font-size: 14px;
-    color: #555;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  @media (max-width: 768px) {
     .card-container {
-        grid-template-columns: repeat(2, 1fr);
-        /* Two cards per row on smaller screens */
+      grid-template-columns: repeat(2, 1fr); /* Two cards per row on smaller screens */
     }
-}
-
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 480px) {
     .card-container {
-        grid-template-columns: 1fr;
-        /* One card per row on very small screens */
+      grid-template-columns: 1fr; /* One card per row on very small screens */
     }
+  }
 
-}
-
-.contact-section {
+  .contact-section {
     padding: 50px 0;
     background-color: #f4f4f4;
 }
@@ -403,7 +381,7 @@ h2 {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .contact-form .form-group {
@@ -415,8 +393,7 @@ h2 {
     margin-bottom: 5px;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form input, .contact-form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -471,36 +448,4 @@ h2 {
 
 .footer .social-links a:hover {
     text-decoration: underline;
-}
-
-.typewriter h1 {
-    overflow: hidden;
-    border-right: .15em solid white;
-    /* Cursor effect */
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
-    animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
-}
-
-@keyframes typing {
-    from {
-        width: 0
-    }
-
-    to {
-        width: 100%
-    }
-}
-
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent
-    }
-
-    50% {
-        border-color: white;
-    }
 }
